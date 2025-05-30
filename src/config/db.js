@@ -8,8 +8,8 @@ const sequelize = new Sequelize({
 const Account = require("../models/account")(sequelize);
 const Destination = require("../models/destination")(sequelize);
 
-Account.hasMany(Destination, { onDelete: "CASCADE" });
-Destination.belongsTo(Account);
+Account.hasMany(Destination, { foreignKey: "account_id", onDelete: "CASCADE" });
+Destination.belongsTo(Account, { foreignKey: "account_id" });
 
 module.exports = sequelize;
 module.exports.Account = Account;

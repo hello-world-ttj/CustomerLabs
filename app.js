@@ -5,6 +5,7 @@ const volleyball = require("volleyball");
 const clc = require("cli-color");
 const db = require("./src/config/db");
 const accounts_route = require("./src/routes/account.routes");
+const destinations_route = require("./src/routes/destination.routes");
 const response_handler = require("./src/helpers/responseHandler");
 
 //! Create an instance of the Express application
@@ -28,6 +29,7 @@ app.get("/health", (req, res) => {
 
 //* Configure routes for user API
 app.use(`/account`, accounts_route);
+app.use(`/destination`, destinations_route);
 
 //! Sync database and start server
 db.sync().then(() => {

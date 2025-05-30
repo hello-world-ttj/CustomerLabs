@@ -14,13 +14,15 @@ exports.update_account = Joi.object({
 });
 
 exports.create_destination = Joi.object({
+  account_id: Joi.number().required(),
   url: Joi.string().required(),
   method: Joi.string().required(),
-  headers: Joi.string().required(),
+  headers: Joi.object().required(),
 });
 
 exports.update_destination = Joi.object({
+  account_id: Joi.number(),
   url: Joi.string(),
   method: Joi.string(),
-  headers: Joi.string(),
+  headers: Joi.object(),
 });
