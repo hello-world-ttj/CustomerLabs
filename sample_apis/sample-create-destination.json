@@ -1,0 +1,12 @@
+{
+  "accountId": 1,
+  "url": "https://webhook.site/cf8bb0df-f2bb-4274-aee4-749a6c75a699",
+  "method": "POST",
+  "headers": {
+    "APP_ID": "COMPANY_APP_12345",
+    "APP_SECRET": "securecompanyappsecretkey1234567890",
+    "ACTION": "employee.update",
+    "Content-Type": "application/json",
+    "Accept": "*/*"
+  }
+}
