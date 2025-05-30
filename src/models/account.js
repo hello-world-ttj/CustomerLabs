@@ -4,5 +4,5 @@ module.exports = (sequelize) =>
     email: { type: DataTypes.STRING, unique: true, allowNull: false },
     name: { type: DataTypes.STRING, allowNull: false },
     website: { type: DataTypes.STRING },
-    secretToken: { type: DataTypes.STRING, unique: true, allowNull: false },
+    secret_token: { type: DataTypes.STRING, unique: true, allowNull: false },
   });
